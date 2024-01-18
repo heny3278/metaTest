@@ -1,0 +1,58 @@
+
+  .wrap{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    height: 40%;
+  }
+  .city{
+margin: 6%;
+  }
+  .area{
+    margin: 6%;
+  }
+  .text{
+    margin: 6%;
+
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80vw;
+    margin-left: 7%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    width: 40%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  tr{
+    border: 1px solid #dddddd;
+    text-align: left;
+    /* padding-right: 8px; */
+    width: 100%;
+    height: 30%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    text-align: center;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+ 
+  }
+  .a{
+    // visibility: visible;
+    display: flex;
+  }
+  .b{
+    // visibility: hidden;
+    display: none;
+  }
+ 

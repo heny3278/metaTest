@@ -1,0 +1,52 @@
+<div class="wrap">
+<mat-form-field appearance="fill" class="area">
+    <mat-label>בחר אזור</mat-label>
+    <mat-select [(ngModel)]="selectedArea" (ngModelChange)="funcCity($event)">
+      <mat-option *ngFor="let area of this.areas" [value]="area" >
+        {{area}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill"  class="city">
+  <mat-label>בחר עיר</mat-label>
+    <mat-select [(ngModel)]="selectedCity" (ngModelChange)="view()">
+      <mat-option *ngFor="let city of this.cities" [value]="city" >
+        {{city}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+<form class="example-form"  class="text" > 
+  <mat-form-field  class="example-full-width">
+    <mat-label>חיפוש חופשי</mat-label>
+    <textarea matInput name="text" [(ngModel)]="freeText"  (change)="text($event)"></textarea >
+  </mat-form-field>
+</form> 
+</div>
+
+<div [ngClass]="{'a':flagView, 'b': !flagView}">
+    <table dir="rtl" class="table">
+        <tr >
+            <th>תאור חנות</th> 
+            <th>כתובת</th>
+            <th>עיר</th>
+            <th>טלפון</th> 
+        </tr>
+
+        <tr *ngFor="let row of forTable" >
+             <td >{{row.store_title}} </td>
+             <td >{{row.store_address}}</td>
+             <td >{{row.city}}</td>
+             <td >{{row.store_phone}} </td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+
+
+
+  
